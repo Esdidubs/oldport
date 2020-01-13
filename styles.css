@@ -1,13 +1,19 @@
+/* Page Reset Start */
+
 * {
     box-sizing: border-box;
   }
 
-  body {
+body {
     font-size: 25px;
     text-align: center;
     font-family: 'Muli', sans-serif;
     margin: 0;
-  }
+}
+
+/* Page Reset End */
+
+/* Navigation Start */
 
 nav {
     position: fixed;
@@ -16,14 +22,61 @@ nav {
     left: 0;
     background-color: #c3073f;
     color: white;
-    font-size: 35px;
-    padding: 15px;
+    font-size: 25px;
+    padding: 10px;
     right: 0;
     z-index: 10;
+    display: flex;
 }
 
+nav p {
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 80%;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    border-right: 2px solid white;
+    font-size: 75%;
+    padding-right: 5px;
+    color: white;
+}
+
+li:last-child {
+    border: 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: #c3073f;
+}
+
+/* Navigation End */
+
+/* Main Start */
+
 header {
-    padding: 5%;
+    padding: 3%;
+}
+
+p {
+    font-size: 20px;
 }
 
 section {    
@@ -34,30 +87,93 @@ section {
     color: white;
 }
 
+section:first-child {    
+    margin-top: 100px;
+}
+
 img {
     border: 2px solid #4e4e50;
-    width: 200px;
+    width: auto;
     height: 200px;
 }
 
-hr {
-    width: 50%;
-    color: #4e4e50;
+#headshot {
+    border-radius: 50%;
 }
 
-h1, h2, a {
-    color: #c3073f;
+.white img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
 }
 
 h1, h2, h3, nav {
     font-family: 'Ovo', serif;
 }
 
-footer {
-    background-color: #4e4e50;
-    padding: 5px;
+h2, section a {
+    color: #c3073f;
 }
 
 h3 {
-    color: #950740;
+    color: #4e4e50;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.white p {
+    padding: 10px;
+    text-align: left;
+    line-height: 150%;
+}
+
+.black p {
+    padding: 0 10px;
+    margin: 0;
+    line-height: 150%;
+}
+
+.emphasise {
+    color: #c3073f;
+    font-weight: bold;
+}
+
+.icon  {
+    border: 0;
+    height: 100px;
+    width: auto;
+    padding: 15px;
+}
+
+/* Main End */
+
+@media screen and (max-width: 800px){
+    nav {        
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 800px){
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    nav ul{
+        align-self: center;
+    }
+    
+    header {
+        padding: 0%;
+    }
+
+    section:first-child {    
+        margin-top: 40px;
+    }
+
+    #about p, #projects p {
+        padding: 0 15%;
+    }
 }
