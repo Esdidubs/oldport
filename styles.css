@@ -115,8 +115,14 @@ h1, h2, h3, nav {
     font-family: 'Ovo', serif;
 }
 
-h2, section a {
+h2 {
     color: #c3073f;
+}
+
+section p a {
+    font-size: 125%;
+    font-weight: bold;
+    color: #d12d5e;
 }
 
 h3 {
