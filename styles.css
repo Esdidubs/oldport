@@ -14,6 +14,10 @@ h2, h3, section {
     text-align: center;
 }
 
+.white:last-child{
+    padding-bottom: 200px;
+}
+
 /* Page Reset End */
 
 /* Navigation Start */
@@ -31,6 +35,7 @@ nav {
     z-index: 10;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 nav p {
@@ -171,7 +176,7 @@ h3 {
     } 
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 768px){
     nav {
         justify-content: space-evenly;
         flex-direction: row;
